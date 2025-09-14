@@ -1,0 +1,746 @@
+{
+	"info": {
+		"_postman_id": "d242f5b5-9688-4ddb-b7ae-3196f96cee95",
+		"name": "Medical_Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24522014"
+	},
+	"item": [
+		{
+			"name": "medicines",
+			"item": [
+				{
+					"name": "createMedicines",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"thuốc chữa bệnh\",\r\n    \"unit\" : \"Hộp\",\r\n    \"quantity\" : 10,\r\n    \"price\" : 120000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9999/api/v1/medicines",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"api",
+								"v1",
+								"medicines"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateMedicins",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"thuốc chữa cảm\",\r\n    \"unit\" : \"Vỉ\",\r\n    \"quantity\" : 10,\r\n    \"price\" : 120000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9999/api/v1/medicines/d646f9dd-6eea-4994-ad4d-036c9aaf23e1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"api",
+								"v1",
+								"medicines",
+								"d646f9dd-6eea-4994-ad4d-036c9aaf23e1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Patients",
+			"item": [
+				{
+					"name": "getPatient",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9999/api/v1/patients/123",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"api",
+								"v1",
+								"patients",
+								"123"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatePatient",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"fullName\": \"nguyễn văn A\",\r\n  \"contactNumber\": \"012345678\",\r\n  \"email\": \"nguyenvana@gmail.com\",\r\n  \"dateOfBirth\": \"2023-05-11\",\r\n  \"address\": \"Quy nhơn\",\r\n  \"otherInfo\": \"Sinh viên\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9999/api/v1/patients/123",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"api",
+								"v1",
+								"patients",
+								"123"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createPatients",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\" : \"nguyen van b\",\r\n    \"contactNumber\" : \"0112344556\",\r\n    \"email\" : \"nguyenvanb@gmail.com\",\r\n    \"dateOfBirth\" : \"2021-10-04\",\r\n    \"address\" : \"Bình Định\",\r\n    \"otherInfo\" : \"Mới nhập viện\",\r\n    \"otherInfoEHealth\":\"Hồ sơ đặt biệt\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9999/api/v1/patients",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"api",
+								"v1",
+								"patients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9999/api/v1/patients/add_service?idPatient=6bcb0b02-f712-4f35-96d8-662e299ed2ad&idSerivces=175433fe-bff5-4b9f-8a18-d51136423922",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9999/api/v1/patients/add_service?idPatient=6bcb0b02-f712-4f35-96d8-662e299ed2ad&idSerivces=175433fe-bff5-4b9f-8a18-d51136423922",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"api",
+								"v1",
+								"patients",
+								"add_service"
+							],
+							"query": [
+								{
+									"key": "idPatient",
+									"value": "6bcb0b02-f712-4f35-96d8-662e299ed2ad"
+								},
+								{
+									"key": "idSerivces",
+									"value": "175433fe-bff5-4b9f-8a18-d51136423922"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Doctors",
+			"item": [
+				{
+					"name": "createDoctors",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"doctorName\" : \"Đào Bá Công\",\r\n    \"specialization\" : \"Khám nội ngoại\",\r\n    \"contactNumber\" : \"0912345678\",\r\n    \"email\" : \"daocong@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9999/api/v1/doctors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"api",
+								"v1",
+								"doctors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateDoctors",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"doctorName\": \"Đào Bá Chuẩn\",\r\n    \"specialization\": \"Khám nội Nội\",\r\n    \"contactNumber\": \"03421543432\",\r\n    \"email\": \"daochuan@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9999/api/v1/doctors/3a6eec40-a35d-443a-8d18-950defa705f2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"api",
+								"v1",
+								"doctors",
+								"3a6eec40-a35d-443a-8d18-950defa705f2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "EHealthRecords",
+			"item": [
+				{
+					"name": "getAllEHealthRecord",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9999/api/v1/e-health-records",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"api",
+								"v1",
+								"e-health-records"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getEHealthRecordByPatient",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9999/api/v1/e-health-records/a3048fc0-b790-4d67-ad74-55b523e898e7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"api",
+								"v1",
+								"e-health-records",
+								"a3048fc0-b790-4d67-ad74-55b523e898e7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateEHealthRecord",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"otherInfo\":\"Hồ sơ đặt biệt\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9999/api/v1/e-health-records/de23ebef-f3dd-4e5d-95a7-440ec2134a98",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"api",
+								"v1",
+								"e-health-records",
+								"de23ebef-f3dd-4e5d-95a7-440ec2134a98"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AppointmentSchedules",
+			"item": [
+				{
+					"name": "getAllAppointmentSchedules",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9999/api/v1/appointment-schedules",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"api",
+								"v1",
+								"appointment-schedules"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAppointmentSchedulesByPatient",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9999/api/v1/appointment-schedules/patient/{patientId}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"api",
+								"v1",
+								"appointment-schedules",
+								"patient",
+								"{patientId}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAppointmentSchedulesByDoctor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9999/api/v1/appointment-schedules/doctor/{doctorId}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"api",
+								"v1",
+								"appointment-schedules",
+								"doctor",
+								"{doctorId}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createAppointmentSchedules",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"patientsId\":\"a3048fc0-b790-4d67-ad74-55b523e898e7\",\r\n    \"doctorId\":\"4389266a-30ec-474d-93b3-da2ddb6015ec\",\r\n    \"appointmentDatetime\":\"2023-05-19 07:30:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9999/api/v1/appointment-schedules",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"api",
+								"v1",
+								"appointment-schedules"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateAppointmentSchedules",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"patientsId\":\"\",\r\n    \"doctorId\":\"\",\r\n    \"appointmentDatetime\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9999/api/v1/appointment-schedules/{appointmentSchedulesId}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"api",
+								"v1",
+								"appointment-schedules",
+								"{appointmentSchedulesId}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateStatusSuccessful",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9999/api/v1/appointment-schedules/status-successful/{appointmentSchedulesId}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"api",
+								"v1",
+								"appointment-schedules",
+								"status-successful",
+								"{appointmentSchedulesId}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateStatusFailed",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9999/api/v1/appointment-schedules/status-failed/{appointmentSchedulesId}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"api",
+								"v1",
+								"appointment-schedules",
+								"status-failed",
+								"{appointmentSchedulesId}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MedicalHistories",
+			"item": [
+				{
+					"name": "createMedicalHistories",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"testResults\":\"Viêm dạ dày cấp tính\",\r\n    \"admissionDate\":\"2023-05-14\",\r\n    \"dischargeDate\":\"2023-05-14\",\r\n    \"patientId\":\"a3048fc0-b790-4d67-ad74-55b523e898e7\",\r\n    \"doctorId\":\"4389266a-30ec-474d-93b3-da2ddb6015ec\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9999/api/v1/medical-histories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"api",
+								"v1",
+								"medical-histories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateMedicalHistories",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"testResults\":\"Viêm dạ dày cấp tính\",\r\n    \"admissionDate\":\"2023-05-14\",\r\n    \"dischargeDate\":\"2023-05-14\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9999/api/v1/medical-histories/{medicalHistoryId}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"api",
+								"v1",
+								"medical-histories",
+								"{medicalHistoryId}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Services",
+			"item": [
+				{
+					"name": "getall",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9999/api/v1/services/get_all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"api",
+								"v1",
+								"services",
+								"get_all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateServices",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"serviceName\": \"Khám ngoại trú\",\r\n    \"description\": \"Khám ngoại trú được cung cấp tại phòng khám cho những trường hợp không cần thiết phải nhập viện hoặc nằm viện một ngày trong các cơ sở y tế, các bác sĩ phường và các bác sĩ chuyên khoa đảm bảo khám ngoại trú.\",\r\n    \"price\": \"2000000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9999/api/v1/services/5bee47f7-7aee-492d-bfd6-c71a072ba706",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"api",
+								"v1",
+								"services",
+								"5bee47f7-7aee-492d-bfd6-c71a072ba706"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createServices",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"serviceName\": \"Khám phòng ngừa\",\r\n    \"description\": \"Bác sĩ tuyến một thường thực hiện khám phòng ngừa và tiêm phòng chống bệnh truyền nhiễm.\",\r\n    \"price\": \"200000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9999/api/v1/services/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"api",
+								"v1",
+								"services",
+								"create"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Prescription_history",
+			"item": [
+				{
+					"name": "createPrescriptionHistory",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"patientId\": \"6bcb0b02-f712-4f35-96d8-662e299ed2ad\",\r\n    \"medicineId\":\"ee7ddffd-bf4e-4765-8c3b-68829923c0c1\",\r\n    \"dosage\":\"1 hộp\",\r\n    \"duration\":\"1 tháng\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9999/api/v1/prescription_history/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"api",
+								"v1",
+								"prescription_history",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatePrescriptionHistory",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"patientId\": \"6bcb0b02-f712-4f35-96d8-662e299ed2ad\",\r\n    \"medicineId\":\"null\",\r\n    \"dosage\":\"2 hộp\",\r\n    \"duration\":\"1 tháng\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9999/api/v1/prescription_history/05385b83-e11c-4c97-aa15-9f385806e2f3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"api",
+								"v1",
+								"prescription_history",
+								"05385b83-e11c-4c97-aa15-9f385806e2f3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Payment_details",
+			"item": []
+		}
+	]
+}
